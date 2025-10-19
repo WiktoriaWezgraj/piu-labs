@@ -1,0 +1,218 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 1rem;
+  background: #fffff5;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+}
+
+.theme-picker {
+  border: 1px solid #c96;
+  padding: 0.5rem;
+  background: #fff5e6;
+  margin-bottom: 1rem;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid #c96;
+  background: #fffbe8;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.item {
+  flex: 1 1 150px;
+  text-align: center;
+  color: white;
+  font-weight: normal;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* NIEBIESKI */
+body:has(input[value="blue"]:checked) .item {
+  background: blue;
+}
+
+body:has(input[value="blue"]:checked) .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 10px;
+}
+
+body:has(input[value="blue"]:checked) .item:nth-child(1) { grid-column: 1; grid-row: 1; }
+body:has(input[value="blue"]:checked) .item:nth-child(2) { grid-column: 2; grid-row: 1; }
+body:has(input[value="blue"]:checked) .item:nth-child(3) { grid-column: 3; grid-row: 1; }
+body:has(input[value="blue"]:checked) .item:nth-child(4) { grid-column: 1; grid-row: 2; }
+body:has(input[value="blue"]:checked) .item:nth-child(5) { grid-column: 3; grid-row: 2; }
+
+body:has(input[value="blue"]:checked) .container {
+  @media (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+body:has(input[value="blue"]:checked) .item {
+  @media (max-width: 1024px) {
+    width: 80%;        
+    max-width: 500px; 
+    font-size: 1.1rem;
+  }
+}
+
+/* CZERWONY */
+@scope (header:has([value="red"]:checked) + .container) {
+  :scope {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+
+    @media (max-width: 1024px) {
+      gap: 24px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  .item {
+    color: #fff;
+    background-color: #d10000;
+    text-align: center;
+    flex: 1 1 auto;
+    font-weight: 400;
+
+    @media (max-width: 1024px) {
+      max-width: calc(50% - 12px);
+      flex: 1 1 calc(50% - 12px);
+    }
+  }
+
+  .item:nth-child(2) { order: 1; }
+  .item:nth-child(3) { order: 2; }
+  .item:nth-child(4) { order: 4; }
+  .item:nth-child(5) { order: 5; }
+
+  .item:first-child {
+    order: 3;
+    font-weight: 700;
+    flex-grow: 1.5;
+
+    @media (max-width: 1024px) {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+
+    &::after {
+      content: "Jestem większy i na środku!";
+      display: block;
+      font-size: 0.85em;
+      font-weight: 400;
+      margin-top: 5px;
+    }
+  }
+
+  :scope::after {
+    display: none;
+    content: "";
+  }
+}
+
+/* ZIELONY */
+@scope (header:has([value="green"]:checked) + .container) {
+  :scope {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+
+    @media (max-width: 1024px) {
+      flex-direction: column-reverse;
+      gap: 25px;
+    }
+  }
+
+  .item {
+    background: #0a7a0a;
+    color: #fff;
+    flex: 1 1 0;
+    position: relative;
+
+    @media (max-width: 1024px) {
+      flex: 0 0 auto;
+      max-width: none;
+      margin-left: auto;
+    }
+  }
+
+  .item:nth-child(1) {
+    flex-grow: 5;
+    padding-left: 38px;
+    padding-right: 38px;
+
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
+
+    &::before,
+    &::after {
+      content: "😀";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) scale(2);
+      line-height: 1;
+      pointer-events: none;
+    }
+    &::before {
+      left: 10px;
+    }
+    &::after {
+      right: 10px;
+    }
+  }
+
+  .item:nth-child(2) {
+    flex-grow: 4;
+
+    @media (max-width: 1024px) {
+      width: 80%;
+    }
+  }
+  .item:nth-child(3) {
+    flex-grow: 3;
+
+    @media (max-width: 1024px) {
+      width: 65%;
+    }
+  }
+  .item:nth-child(4) {
+    flex-grow: 2;
+
+    @media (max-width: 1024px) {
+      width: 50%;
+    }
+  }
+  .item:nth-child(5) {
+    flex-grow: 1;
+
+    @media (max-width: 1024px) {
+      width: 35%;
+    }
+  }
+
+  :scope::after {
+    display: none;
+  }
+}
+
+

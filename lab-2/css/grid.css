@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #123;
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "aside"
+    "footer";
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  grid-area: header;
+  background-color: #f4a71d;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.25rem;
+}
+
+header .logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: #222;
+  border-radius: 0.3rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+}
+
+header .logo::before {
+  content: "Logo";
+  font-size: 0.95rem;
+  margin-right: 0.25rem;
+}
+
+header h1 {
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+nav {
+  grid-area: nav;
+  background-color: #186fc8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 0.5rem 1rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #e0f0ff;
+}
+
+main {
+  grid-area: main;
+  background-color: #fff;
+  padding: 1rem;
+}
+
+aside {
+  grid-area: aside;
+  background-color: #e4f9ef;
+  padding: 1rem;
+}
+
+aside > div {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  font-size: 2.75rem;
+}
+
+aside span {
+  line-height: 1;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #2bb74b;
+  color: #fff;
+  text-align: center;
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p {
+  font-size: 0.875rem;
+}
+
+main h1,
+main h2,
+main h3,
+main p,
+aside h1,
+aside h2,
+aside h3,
+aside p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* WERSJA SZEROKA */
+@media (min-width: 1024px) {
+  body {
+    background-color: #dcdcdc;
+  }
+
+  .container {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      "header header"
+      "nav nav"
+      "main aside"
+      "footer footer";
+  }
+
+  header,
+  nav,
+  main,
+  aside,
+  footer {
+    padding-inline: 1.25rem;
+  }
+
+  nav {
+    justify-content: flex-start;
+  }
+
+  aside > div {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    align-content: start;
+    gap: 1rem 1.25rem;
+    font-size: 4.5rem;
+  }
+}

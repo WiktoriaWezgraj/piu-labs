@@ -1,12 +1,45 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Lab 4</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <h1>Lab 4</h1>
-    <a href="..">Powrót</a>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>Kanban</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>Tablica Kanban</h1>
+
+  <div class="board">
+    <div class="column" data-column="todo">
+      <h2>Do zrobienia (<span class="count">0</span>)</h2>
+      <div class="column-buttons">
+        <button class="add">Dodaj kartę</button>
+        <button class="colorize">Koloruj kolumnę</button>
+        <button class="sort">Sortuj</button>
+      </div>
+      <div class="cards"></div>
+    </div>
+
+    <div class="column" data-column="doing">
+      <h2>W trakcie (<span class="count">0</span>)</h2>
+      <div class="column-buttons">
+        <button class="add">Dodaj kartę</button>
+        <button class="colorize">Koloruj kolumnę</button>
+        <button class="sort">Sortuj</button>
+      </div>
+      <div class="cards"></div>
+    </div>
+
+    <div class="column" data-column="done">
+      <h2>Zrobione (<span class="count">0</span>)</h2>
+      <div class="column-buttons">
+        <button class="add">Dodaj kartę</button>
+        <button class="colorize">Koloruj kolumnę</button>
+        <button class="sort">Sortuj</button>
+      </div>
+      <div class="cards"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>

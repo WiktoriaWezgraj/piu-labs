@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Lab-5 — Kształty</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<h1>Kształty — Lab 5</h1>
+<div class="controls" role="toolbar" aria-label="Kontrolki">
+<button id="addSquare" class="accent">Dodaj kwadrat</button>
+<button id="addCircle" class="accent">Dodaj kółko</button>
+<button id="recolorSquares" class="muted">Przekoloruj kwadraty</button>
+<button id="recolorCircles" class="muted">Przekoloruj kółka</button>
+</div>
+
+
+<div class="counters">
+Liczba kwadratów: <strong id="cntSquares">0</strong>
+&nbsp;|&nbsp;
+Liczba kółek: <strong id="cntCircles">0</strong>
+</div>
+
+
+<div id="board" class="board" aria-label="Pole do dodawania kształtów"></div>
+
+
+<footer>Kliknij kształt, aby go usunąć.</footer>
+
+
+<script type="module" src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab 6</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="card">
+    <h1>Ajax</h1>
+    <p class="subtitle">Demo</p>
+
+    <div class="buttons">
+      <button id="loadBtn" class="btn btn-success">Pobierz dane</button>
+      <button id="errorBtn" class="btn btn-danger">Pobierz dane (Błąd)</button>
+      <button id="resetBtn" class="btn btn-light">Reset</button>
+    </div>
+
+    <div id="loader" class="loader hidden"></div>
+
+    <div id="error" class="error-box"></div>
+
+    <ul id="list" class="list"></ul>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
+

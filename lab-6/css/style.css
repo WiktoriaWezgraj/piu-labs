@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: #fff;
+  padding: 30px 35px;
+  width: 420px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+.subtitle {
+  margin: 6px 0 22px;
+  color: #666;
+  font-size: 14px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.btn {
+  flex: 1;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+  opacity: 0.95;
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+  color: #fff;
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  color: #fff;
+}
+
+.btn-light {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.loader {
+  margin: 15px auto;
+  width: 42px;
+  height: 42px;
+  border: 5px solid #ddd;
+  border-top: 5px solid #764ba2;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.hidden {
+  display: none;
+}
+
+.error-box {
+  min-height: 22px;
+  margin-top: 10px;
+  color: #d32f2f;
+  font-weight: 600;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  max-height: 260px;
+  overflow-y: auto;
+  text-align: left;
+}
+
+.list li {
+  background: #f4f6ff;
+  margin-bottom: 8px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  border-left: 5px solid #667eea;
+}

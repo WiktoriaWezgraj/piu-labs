@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Sklep z odzieżą</title>
+  <script src="product-card.js" defer></script>
+
+  <style>
+    body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(180deg, #f0f2f5, #ffffff);
+}
+
+h1 {
+  text-align: center;
+  padding: 30px 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px 35px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+@media (max-width: 900px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+}
+  </style>
+</head>
+<body>
+
+<h1>Sklep z odzieżą</h1>
+
+<div class="products">
+
+  <product-card>
+    <img slot="image" src="shirt1.jpg" alt="">
+    <span slot="promotion">-10%</span>
+    <span slot="name">Koszulka polo</span>
+    <span slot="price">79,99 zł</span>
+    <span slot="colors">Kolory: biały, czarny</span>
+    <span slot="sizes">Rozmiary: S, M, L</span>
+  </product-card>
+
+  <product-card>
+    <img slot="image" src="shirt2.jpg" alt="">
+    <span slot="name">Koszulka sportowa</span>
+    <span slot="price">99,99 zł</span>
+    <span slot="colors">Kolory: czarny, czerwony, granatowy</span>
+    <span slot="sizes">Rozmiary: M, L, XL</span>
+  </product-card>
+
+  <product-card>
+    <img slot="image" src="pants1.jpg" alt="">
+    <span slot="name">Jeansy damskie z szeroką nogawką</span>
+    <span slot="price">129,89 zł</span>
+    <span slot="sizes">Rozmiary: 32, 34, 36</span>
+  </product-card>
+
+  <product-card>
+    <img slot="image" src="jacket1.jpg" alt="">
+    <span slot="promotion">WYPRZEDAŻ</span>
+    <span slot="name">Kurtka Zimowa</span>
+    <span slot="price">299 zł</span>
+    <span slot="colors">Kolory: zielony, czerwony</span>
+    <span slot="sizes">Rozmiary: L, XL</span>
+  </product-card>
+
+  <product-card>
+    <img slot="image" src="hat1.jpg" alt="">
+    <span slot="name">Czapka</span>
+    <span slot="price">59 zł</span>
+    <span slot="colors">Kolory: pomarańczowy, czarny</span>
+  </product-card>
+
+  <product-card>
+    <img slot="image" src="scarf1.jpg" alt="">
+    <span slot="name">Szalik</span>
+    <span slot="price">49,99 zł</span>
+    <span slot="colors">Kolory: czarny, biały, szary</span>
+  </product-card>
+
+</div>
+
+</body>
+</html>

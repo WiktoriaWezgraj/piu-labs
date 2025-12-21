@@ -1,0 +1,8 @@
+[
+  { "id": 1, "name": "Koszulka polo", "price": 79.99, "colors": ["biały", "czarny"], "sizes": ["S", "M", "L"], "image": "shirt1.jpg", "promo": "10% taniej" },
+  { "id": 2, "name": "Koszulka sportowa", "price": 99.99, "colors": ["czarny", "czerwony", "granatowy"], "image": "shirt2.jpg" },
+  { "id": 3, "name": "Jeansy damskie z szeroką nogawką", "price": 129.89, "sizes": ["32", "34", "36"], "image": "pants1.jpg" },
+  { "id": 4, "name": "Kurtka zimowa", "price": 299, "colors": ["zielony", "czerwony"], "sizes": ["L", "XL"], "image": "jacket1.jpg" },
+  { "id": 5, "name": "Czapka", "price": 59, "colors": ["pomarańczowy", "czarny"], "image": "hat1.jpg" },
+  { "id": 6, "name": "Szalik", "price": 49.99, "colors": ["czarny", "biały", "szary"], "image": "scarf1.jpg" }
+]
